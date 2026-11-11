@@ -1426,7 +1426,14 @@ endif
 ifeq ($(CONFIG_L2_PACKET), haiku)
 OBJS += wpa_gui-haiku/WirelessConfigDialog.o
 OBJS += wpa_gui-haiku/notify_haiku.o
-LIBS += -lnetwork -lbe -lbnetapi -llocalestub
+OBJS += wpa_gui-haiku/WifiQrCode.o
+OBJS += wpa_gui-haiku/QrVideoConsumer.o
+OBJS += wpa_gui-haiku/WifiQrCaptureWindow.o
+OBJS += wpa_gui-haiku/quirc.o
+OBJS += wpa_gui-haiku/decode.o
+OBJS += wpa_gui-haiku/identify.o
+OBJS += wpa_gui-haiku/version_db.o
+LIBS += -lnetwork -lbe -lbnetapi -llocalestub -ltranslation -lmedia -ltracker
 LIBS_c += -lnetwork
 ifeq ($(shell $(CC) -dumpversion | cut -d. -f1), 7)
 LIBS += -lstdc++
@@ -2049,7 +2056,8 @@ CATKEYS_DIR=wpa_gui-haiku/locales
 SRCS= \
 	wpa_gui-haiku/main_haiku.cpp \
 	wpa_gui-haiku/notify_haiku.cpp \
-	wpa_gui-haiku/WirelessConfigDialog.cpp
+	wpa_gui-haiku/WirelessConfigDialog.cpp \
+	wpa_gui-haiku/WifiQrCaptureWindow.cpp
 
 wpa_gui-haiku/wpa_supplicant.pre : $(SRCS)
 	-cat $(SRCS) | $(CC) -E -x c++ -Iwpa_gui-haiku $(filter-out -MMD,$(CFLAGS)) -DB_COLLECTING_CATKEYS - | grep -av '^#' > $@

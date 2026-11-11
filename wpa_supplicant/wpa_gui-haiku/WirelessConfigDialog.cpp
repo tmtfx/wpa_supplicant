@@ -12,9 +12,12 @@
  * See README and COPYING for more details.
  */
 
+#include <Alert.h>
+#include <Bitmap.h>
 #include <Button.h>
 #include <Catalog.h>
 #include <CheckBox.h>
+#include <FilePanel.h>
 #include <GridLayout.h>
 #include <GridView.h>
 #include <LayoutBuilder.h>
@@ -25,10 +28,14 @@
 #include <PopUpMenu.h>
 #include <StringView.h>
 #include <TextControl.h>
+#include <TranslationUtils.h>
 #include <Window.h>
 #include <View.h>
 
 #include <new>
+
+#include "WifiQrCaptureWindow.h"
+#include "WifiQrCode.h"
 
 
 #undef B_TRANSLATION_CONTEXT
@@ -38,6 +45,9 @@
 static const uint32 kMessageCancel = 'btcl';
 static const uint32 kMessageOk = 'btok';
 static const uint32 kMessageShowPass = 'btsh';
+static const uint32 kMessageScanWebcam = 'btwc';
+static const uint32 kMessageScanImage = 'btig';
+static const uint32 kMessageQrFound = 'btqr';
 
 
 class WirelessConfigView : public BView {
@@ -45,7 +55,9 @@ public:
 	WirelessConfigView()
 		:
 		BView("WirelessConfigView", B_WILL_DRAW),
-		fPassword(NULL)
+		fPassword(NULL),
+		fFilePanel(NULL),
+		fCaptureWindow(NULL)
 	{
 		fErrorLabel = new BStringView("error label", NULL);
 		BFont font(be_plain_font);
@@ -106,7 +118,24 @@ public:
 		fShowPassButton->SetBehavior(BButton::B_TOGGLE_BEHAVIOR);
 		const float height = fPassword->Bounds().Height();
 		fShowPassButton->SetExplicitSize(BSize(height, height));
-		layout->AddView(fShowPassButton, 2, row++);
+
+		fWebcamButton = new(std::nothrow) BButton("📷",
+			new BMessage(kMessageScanWebcam));
+		fWebcamButton->SetToolTip(B_TRANSLATE("Scan Wi-Fi QR code from webcam"));
+		fWebcamButton->SetExplicitSize(BSize(height, height));
+
+		fImageButton = new(std::nothrow) BButton("🖼",
+			new BMessage(kMessageScanImage));
+		fImageButton->SetToolTip(
+			B_TRANSLATE("Scan Wi-Fi QR code from image file"));
+		fImageButton->SetExplicitSize(BSize(height, height));
+
+		BGroupView* passwordButtons = new(std::nothrow) BGroupView(B_HORIZONTAL,
+			B_USE_SMALL_SPACING);
+		passwordButtons->GroupLayout()->AddView(fShowPassButton);
+		passwordButtons->GroupLayout()->AddView(fWebcamButton);
+		passwordButtons->GroupLayout()->AddView(fImageButton);
+		layout->AddView(passwordButtons, 2, row++);
 
 		fPersist = new(std::nothrow) BCheckBox(B_TRANSLATE("Store this configuration"));
 		layout->AddItem(BSpaceLayoutItem::CreateGlue(), 0, row);
@@ -130,10 +159,18 @@ public:
 		.End();
 	}
 
+	virtual
+	~WirelessConfigView()
+	{
+		delete fFilePanel;
+	}
+
 	virtual void
 	AttachedToWindow()
 	{
 		fShowPassButton->SetTarget(this);
+		fWebcamButton->SetTarget(this);
+		fImageButton->SetTarget(this);
 		fCancelButton->SetTarget(Window());
 		fOkButton->SetTarget(Window());
 		fOkButton->MakeDefault(true);
@@ -145,6 +182,7 @@ public:
 	{
 		switch (message->what) {
 			case kMessageShowPass:
+			{
 				bool state = fShowPassButton->Value() == B_CONTROL_OFF;
 
 				BString temp(fPassword->Text()); // HideTyping() will clear the text
@@ -157,9 +195,107 @@ public:
 				else
 					fShowPassButton->SetToolTip(B_TRANSLATE("Hide password"));
 				return;
+			}
+
+			case kMessageScanWebcam:
+			{
+				if (fCaptureWindow == NULL) {
+					fCaptureWindow = new(std::nothrow) WifiQrCaptureWindow(
+						BMessenger(this), kMessageQrFound);
+					fCaptureWindow->Show();
+				}
+				return;
+			}
+
+			case kMessageScanImage:
+			{
+				if (fFilePanel == NULL) {
+					BMessenger target(this);
+					fFilePanel = new(std::nothrow) BFilePanel(B_OPEN_PANEL,
+						&target);
+				}
+				fFilePanel->Show();
+				return;
+			}
+
+			case B_REFS_RECEIVED:
+			{
+				entry_ref ref;
+				if (message->FindRef("refs", &ref) == B_OK) {
+					BBitmap* bitmap = BTranslationUtils::GetBitmap(&ref);
+					BString ssid, password;
+					uint32 authMode;
+					bool hidden;
+					bool found = bitmap != NULL
+						&& ScanBitmapForWifiQr(bitmap, ssid, authMode,
+							password, hidden);
+					delete bitmap;
+
+					if (found) {
+						_ApplyScanResult(ssid, authMode, password);
+					} else {
+						BAlert* alert = new BAlert(
+							B_TRANSLATE("No QR code found"),
+							B_TRANSLATE("No Wi-Fi QR code could be found in "
+								"that image."),
+							B_TRANSLATE("OK"));
+						alert->Go();
+					}
+				}
+				return;
+			}
+
+			case kMessageQrFound:
+			{
+				fCaptureWindow = NULL;
+					// It is in the middle of quitting itself.
+
+				bool found = false;
+				message->FindBool("found", &found);
+				if (found) {
+					BString ssid, password;
+					uint32 authMode = B_NETWORK_AUTHENTICATION_NONE;
+					message->FindString("ssid", &ssid);
+					message->FindUInt32("authMode", &authMode);
+					message->FindString("password", &password);
+					_ApplyScanResult(ssid, authMode, password);
+				}
+				return;
+			}
 		}
 
 		BView::MessageReceived(message);
+	}
+
+	void
+	_ApplyScanResult(const BString& ssid, uint32 authMode,
+		const BString& password)
+	{
+		if (!ssid.IsEmpty() && ssid != fNetworkName->Text()) {
+			BString text;
+			text.SetToFormat(B_TRANSLATE("The scanned QR code is for "
+				"network '%s', not '%s'. The password will be used "
+				"anyway."), ssid.String(), fNetworkName->Text());
+			BAlert* alert = new BAlert(B_TRANSLATE("Different network"),
+				text.String(), B_TRANSLATE("OK"));
+			alert->Go();
+		}
+
+		switch (authMode) {
+			default:
+			case B_NETWORK_AUTHENTICATION_NONE:
+				fAuthOpen->SetMarked(true);
+				break;
+			case B_NETWORK_AUTHENTICATION_WEP:
+				fAuthWEP->SetMarked(true);
+				break;
+			case B_NETWORK_AUTHENTICATION_WPA:
+			case B_NETWORK_AUTHENTICATION_WPA2:
+				fAuthWPA->SetMarked(true);
+				break;
+		}
+
+		fPassword->SetText(password.String());
 	}
 
 	void
@@ -231,6 +367,10 @@ private:
 	BButton* fCancelButton;
 	BButton* fOkButton;
 	BButton* fShowPassButton;
+	BButton* fWebcamButton;
+	BButton* fImageButton;
+	BFilePanel* fFilePanel;
+	BWindow* fCaptureWindow;
 };
 
 
