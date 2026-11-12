@@ -213,6 +213,21 @@ public:
 					BMessenger target(this);
 					fFilePanel = new(std::nothrow) BFilePanel(B_OPEN_PANEL,
 						&target);
+
+					// WirelessConfigWindow uses B_FLOATING_ALL_WINDOW_FEEL,
+					// i.e. it always stays on top of every other window on
+					// the system. The file panel's own window defaults to a
+					// normal feel, so it would never be able to appear in
+					// front of it - give it the same feel so the two can
+					// actually coexist and stack normally against each
+					// other.
+					if (fFilePanel != NULL) {
+						BWindow* panelWindow = fFilePanel->Window();
+						if (panelWindow != NULL && panelWindow->Lock()) {
+							panelWindow->SetFeel(B_FLOATING_ALL_WINDOW_FEEL);
+							panelWindow->Unlock();
+						}
+					}
 				}
 				fFilePanel->Show();
 				return;
