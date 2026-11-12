@@ -209,33 +209,23 @@ public:
 
 			case kMessageScanImage:
 			{
-				/*if (fFilePanel == NULL) {
+				if (fFilePanel == NULL) {
 					fFilePanel = new(std::nothrow) BFilePanel(B_OPEN_PANEL,
 						new BMessenger(this));
 
 					// WirelessConfigWindow uses B_FLOATING_ALL_WINDOW_FEEL,
-					// i.e. it always stays on top of every other window on
-					// the system. The file panel's own window defaults to a
-					// normal feel, so it would never be able to appear in
-					// front of it - give it the same feel so the two can
-					// actually coexist and stack normally against each
-					// other.
+					// so the panel needs the same feel to stay stackable
+					// in front of it.
 					if (fFilePanel != NULL) {
 						BWindow* panelWindow = fFilePanel->Window();
 						if (panelWindow != NULL && panelWindow->Lock()) {
-							panelWindow->SetFeel(B_FLOATING_ALL_WINDOW_FEEL);//
+							panelWindow->SetFeel(B_FLOATING_ALL_WINDOW_FEEL);
 							panelWindow->Unlock();
 						}
 					}
-				}*/
-				if (fFilePanel == NULL) {
-                    // Creiamo il file panel senza forzare messenger complessi. 
-                    // Di default invierà B_REFS_RECEIVED alla finestra (Window()) che possiede questa vista.
-                    fFilePanel = new(std::nothrow) BFilePanel(B_OPEN_PANEL);
-                }
-				if (fFilePanel != NULL && !fFilePanel->IsShowing()) {
-                    fFilePanel->Show();
-                }
+				}
+				if (fFilePanel != NULL && !fFilePanel->IsShowing())
+					fFilePanel->Show();
 				return;
 			}
 

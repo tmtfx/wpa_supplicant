@@ -55,6 +55,7 @@ extern "C" {
 
 
 static const uint32 kMsgJoinTimeout = 'jnto';
+static const uint32 kMsgJoinDialogDone = 'jgdn';
 static const char *kWPASupplicantKeyring = "wpa_supplicant";
 
 
@@ -115,7 +116,13 @@ virtual	void					MessageReceived(BMessage *message);
 		status_t				RunSupplicantInMainThread();
 
 private:
+	struct JoinDialogData {
+		WPASupplicantApp*	app;
+		BMessage*			request;
+	};
+
 static	int32					_SupplicantThread(void *data);
+static	int32					_JoinDialogThread(void* data);
 static	void					_EventLoopProcessEvents(int sock,
 									void *eventLoopContext, void *data);
 
@@ -235,14 +242,55 @@ WPASupplicantApp::MessageReceived(BMessage *message)
 		case kMsgWPAJoinNetwork:
 		{
 			if (_CheckAskForConfig(message)) {
-				status_t status = wireless_config_dialog(*message);
-				if (status != B_OK) {
-					_SendReplyIfNeeded(*message, status);
+				BMessage* request = DetachCurrentMessage();
+				if (request == NULL)
+					return;
+
+				JoinDialogData* data = new(std::nothrow) JoinDialogData;
+				if (data == NULL) {
+					_SendReplyIfNeeded(*request, B_NO_MEMORY);
+					delete request;
 					return;
 				}
+
+				data->app = this;
+				data->request = request;
+
+				thread_id dialogThread = spawn_thread(_JoinDialogThread,
+					"wpa join dialog", B_NORMAL_PRIORITY, data);
+				if (dialogThread < B_OK || resume_thread(dialogThread) != B_OK) {
+					_SendReplyIfNeeded(*request, dialogThread < B_OK
+						? dialogThread : B_ERROR);
+					delete data;
+					delete request;
+					return;
+				}
+
+				return;
 			}
 
 			_EnqueueAndNotify(DetachCurrentMessage());
+				// The event processing code will send the reply.
+			return;
+		}
+
+		case kMsgJoinDialogDone:
+		{
+			BMessage* request = NULL;
+			if (message->FindPointer("request", (void**)&request) != B_OK
+				|| request == NULL) {
+				return;
+			}
+
+			status_t status = B_ERROR;
+			message->FindInt32("status", &status);
+			if (status != B_OK) {
+				_SendReplyIfNeeded(*request, status);
+				delete request;
+				return;
+			}
+
+			_EnqueueAndNotify(request);
 				// The event processing code will send the reply.
 			return;
 		}
@@ -253,6 +301,7 @@ WPASupplicantApp::MessageReceived(BMessage *message)
 				// The event processing code will send the reply.
 			return;
 		}
+
 
 		case B_NETWORK_MONITOR:
 		{
@@ -271,6 +320,29 @@ WPASupplicantApp::MessageReceived(BMessage *message)
 	}
 
 	BApplication::MessageReceived(message);
+}
+
+
+int32
+WPASupplicantApp::_JoinDialogThread(void* data)
+{
+	JoinDialogData* dialogData = (JoinDialogData*)data;
+	BMessage* request = dialogData->request;
+	WPASupplicantApp* app = dialogData->app;
+	delete dialogData;
+
+	status_t status = wireless_config_dialog(*request);
+
+	BMessage done(kMsgJoinDialogDone);
+	done.AddPointer("request", request);
+	done.AddInt32("status", status);
+
+	if (BMessenger(app).SendMessage(&done) != B_OK) {
+		_SendReplyIfNeeded(*request, status);
+		delete request;
+	}
+
+	return B_OK;
 }
 
 
