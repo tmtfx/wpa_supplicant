@@ -57,7 +57,8 @@ public:
 		BView("WirelessConfigView", B_WILL_DRAW),
 		fPassword(NULL),
 		fFilePanel(NULL),
-		fCaptureWindow(NULL)
+		fCaptureWindow(NULL),
+		fHidden(false)
 	{
 		fErrorLabel = new BStringView("error label", NULL);
 		BFont font(be_plain_font);
@@ -243,7 +244,7 @@ public:
 					delete bitmap;
 
 					if (found) {
-						_ApplyScanResult(ssid, authMode, password);
+						_ApplyScanResult(ssid, authMode, password, hidden);
 					} else {
 						BAlert* alert = new BAlert(
 							B_TRANSLATE("No QR code found"),
@@ -266,10 +267,12 @@ public:
 				if (found) {
 					BString ssid, password;
 					uint32 authMode = B_NETWORK_AUTHENTICATION_NONE;
+					bool hidden = false;
 					message->FindString("ssid", &ssid);
 					message->FindUInt32("authMode", &authMode);
 					message->FindString("password", &password);
-					_ApplyScanResult(ssid, authMode, password);
+					message->FindBool("hidden", &hidden);
+					_ApplyScanResult(ssid, authMode, password, hidden);
 				}
 				return;
 			}
@@ -280,17 +283,28 @@ public:
 
 	void
 	_ApplyScanResult(const BString& ssid, uint32 authMode,
-		const BString& password)
+		const BString& password, bool hidden)
 	{
 		if (!ssid.IsEmpty() && ssid != fNetworkName->Text()) {
-			BString text;
-			text.SetToFormat(B_TRANSLATE("The scanned QR code is for "
-				"network '%s', not '%s'. The password will be used "
-				"anyway."), ssid.String(), fNetworkName->Text());
-			BAlert* alert = new BAlert(B_TRANSLATE("Different network"),
-				text.String(), B_TRANSLATE("OK"));
-			alert->Go();
+			bool replace = true;
+			if (fNetworkName->TextView()->TextLength() > 0) {
+				BString text;
+				text.SetToFormat(B_TRANSLATE("The scanned QR code is for "
+					"network '%s', not '%s'. Do you want to replace the "
+					"network name with the one from the QR code?"),
+					ssid.String(), fNetworkName->Text());
+				BAlert* alert = new BAlert(B_TRANSLATE("Different network"),
+					text.String(), B_TRANSLATE("Keep current"),
+					B_TRANSLATE("Replace"), NULL, B_WIDTH_AS_USUAL,
+					B_WARNING_ALERT);
+				alert->SetShortcut(0, B_ESCAPE);
+				replace = alert->Go() == 1;
+			}
+			if (replace)
+				fNetworkName->SetText(ssid.String());
 		}
+
+		fHidden = hidden;
 
 		switch (authMode) {
 			default:
@@ -343,6 +357,8 @@ public:
 		BString password;
 		if (message.FindString("password", &password) == B_OK)
 			fPassword->SetText(password);
+
+		fHidden = message.GetBool("hidden", false);
 	}
 
 	void
@@ -365,6 +381,9 @@ public:
 
 		message.RemoveName("persistent");
 		message.AddBool("persistent", fPersist->Value() != 0);
+
+		message.RemoveName("hidden");
+		message.AddBool("hidden", fHidden);
 	}
 
 private:
@@ -382,6 +401,7 @@ private:
 	BButton* fImageButton;
 	BFilePanel* fFilePanel;
 	BWindow* fCaptureWindow;
+	bool fHidden;
 };
 
 

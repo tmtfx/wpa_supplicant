@@ -15,6 +15,7 @@
 
 #include "WifiQrCode.h"
 
+#include <ctype.h>
 #include <string.h>
 
 #include <Bitmap.h>
@@ -57,22 +58,16 @@ ParseWifiQrText(const BString& text, BString& ssid, uint32& authMode,
 	bool haveSsid = false;
 
 	while (*p != '\0') {
-		char key = *p;
-		const char* colon = NULL;
-		for (const char* s = p; *s != '\0'; s++) {
-			if (*s == '\\' && *(s + 1) != '\0') {
-				s++;
-				continue;
-			}
-			if (*s == ':') {
-				colon = s;
-				break;
-			}
-			if (*s == ';')
-				break;
-		}
-		if (colon == NULL)
+		// Keys are plain letters ("S", "T", "P", "H", but also multi-letter
+		// ones like "PH2", "R" or "K" from the WPA3/ZXing extensions), so
+		// the colon must come after a run of letters only.
+		const char* colon = p;
+		while (isalpha((unsigned char)*colon))
+			colon++;
+		if (colon == p || *colon != ':')
 			break;
+
+		BString key(p, colon - p);
 
 		const char* valueStart = colon + 1;
 		const char* valueEnd = NULL;
@@ -92,32 +87,25 @@ ParseWifiQrText(const BString& text, BString& ssid, uint32& authMode,
 		BString value(valueStart, valueEnd - valueStart);
 		UnescapeWifiField(value);
 
-		switch (key) {
-			case 'S':
-				ssid = value;
-				haveSsid = true;
-				break;
-
-			case 'T':
-				if (value.ICompare("WPA") == 0 || value.ICompare("WPA2") == 0)
-					authMode = B_NETWORK_AUTHENTICATION_WPA2;
-				else if (value.ICompare("WEP") == 0)
-					authMode = B_NETWORK_AUTHENTICATION_WEP;
-				else
-					authMode = B_NETWORK_AUTHENTICATION_NONE;
-				break;
-
-			case 'P':
-				password = value;
-				break;
-
-			case 'H':
-				hidden = value.ICompare("true") == 0;
-				break;
-
-			default:
-				break;
+		if (key == "S") {
+			ssid = value;
+			haveSsid = true;
+		} else if (key == "T") {
+			// "nopass" (or an empty value) means an open network; "WEP" is
+			// WEP; everything else ("WPA", "WPA2", "WPA3", "SAE", ...) is a
+			// WPA family network, which the dialog shows as WPA/WPA2.
+			if (value.IsEmpty() || value.ICompare("nopass") == 0)
+				authMode = B_NETWORK_AUTHENTICATION_NONE;
+			else if (value.ICompare("WEP") == 0)
+				authMode = B_NETWORK_AUTHENTICATION_WEP;
+			else
+				authMode = B_NETWORK_AUTHENTICATION_WPA2;
+		} else if (key == "P") {
+			password = value;
+		} else if (key == "H") {
+			hidden = value.ICompare("true") == 0;
 		}
+		// Other keys (PH2, E, A, I, R, K, ...) are not used here.
 
 		p = (*valueEnd == ';') ? valueEnd + 1 : valueEnd;
 	}
