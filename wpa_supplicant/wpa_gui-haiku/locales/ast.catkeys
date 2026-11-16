@@ -1,15 +1,26 @@
-1	Asturian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Autenticación:
-Cancel	wpa_supplicant		Encaboxar
-Connect to a WiFi network	wpa_supplicant		Coneutase a una rede WiFi
-Failed to join network. (Incorrect password?)	wpa_supplicant		Falló al unise a la rede. (¿Ye incorreuta la contraseña?)
-Hide password	wpa_supplicant		Hide password
-Network name:	wpa_supplicant		Nome de la rede:
-OK	wpa_supplicant		Aceutar
-Open ‒ no encryption	wpa_supplicant		Open ‒ no encryption
-Password format invalid!	wpa_supplicant		Nun val el formatu de la contraseña.
+1	Asturian	application/x-vnd.malinen-wpa_supplicant	3816098977
 Password:	wpa_supplicant		Contraseña:
-Show password	wpa_supplicant		Show password
 Store this configuration	wpa_supplicant		Atroxar esti axuste
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
+No video capture device could be used: %s	wpa_supplicant		Nun pudo usase nengún preséu de captura de videu: %s
+Different network	wpa_supplicant		Rede estremada
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		El códigu QR escaniáu ye pa la rede '%s', non '%s'. ¿Quies sustituyir el nome de la rede pol del códigu QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Apunta la cámara a un códigu QR pa compartir Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ cifráu inseguru
+OK	wpa_supplicant		Aceutar
+Cancel	wpa_supplicant		Encaboxar
+Show password	wpa_supplicant		Amosar contraseña
+Open ‒ no encryption	wpa_supplicant		Abierta ‒ ensin cifráu
+Authentication:	wpa_supplicant		Autenticación:
+No QR code found	wpa_supplicant		Nun s'alcontró dengún códigu QR
+Replace	wpa_supplicant		Sustituyir
+Failed to join network. (Incorrect password?)	wpa_supplicant		Falló al unise a la rede. (¿Ye incorreuta la contraseña?)
 WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Nun s'alcontró dengún códigu QR de Wi-Fi nesa imaxe.
+Connect to a WiFi network	wpa_supplicant		Coneutase a una rede WiFi
+Password format invalid!	wpa_supplicant		Nun val el formatu de la contraseña.
+Hide password	wpa_supplicant		Anubrir contraseña
+Network name:	wpa_supplicant		Nome de la rede:
+Scan Wi-Fi QR code	wpa_supplicant		Escaniar códigu QR de Wi-Fi
+Keep current	wpa_supplicant		Caltener l'actual
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Escaniar códigu QR de Wi-Fi dende la cámara web
+Scan Wi-Fi QR code from image file	wpa_supplicant		Escaniar códigu QR de Wi-Fi dende un ficheru d'imaxe

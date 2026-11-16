@@ -1,15 +1,26 @@
-1	Danish	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Godkendelse:
-Cancel	wpa_supplicant		Afbryd
-Connect to a WiFi network	wpa_supplicant		Forbind til et trådløst netværk
-Failed to join network. (Incorrect password?)	wpa_supplicant		Fejl i netværksforbindelse. (Forkert kodeord?)
-Hide password	wpa_supplicant		Hide password
-Network name:	wpa_supplicant		Netværksnavn:
-OK	wpa_supplicant		O.k.
-Open ‒ no encryption	wpa_supplicant		Open ‒ no encryption
-Password format invalid!	wpa_supplicant		Ugyldigt kodeordsformat!
+1	Danish	application/x-vnd.malinen-wpa_supplicant	3816098977
 Password:	wpa_supplicant		Kodeord:
-Show password	wpa_supplicant		Show password
 Store this configuration	wpa_supplicant		Gem denne opsætning
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
+No video capture device could be used: %s	wpa_supplicant		Der kunne ikke bruges nogen videooptagelsesenhed: %s
+Different network	wpa_supplicant		Andet netværk
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Den scannede QR-kode er til netværket '%s', ikke '%s'. Vil du erstatte netværksnavnet med det fra QR-koden?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Ret kameraet mod en Wi-Fi-delings QR-kode…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ usikker kryptering
+OK	wpa_supplicant		O.k.
+Cancel	wpa_supplicant		Afbryd
+Show password	wpa_supplicant		Vis kodeord
+Open ‒ no encryption	wpa_supplicant		Åben ‒ ingen kryptering
+Authentication:	wpa_supplicant		Godkendelse:
+No QR code found	wpa_supplicant		Ingen QR-kode fundet
+Replace	wpa_supplicant		Erstat
+Failed to join network. (Incorrect password?)	wpa_supplicant		Fejl i netværksforbindelse. (Forkert kodeord?)
 WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Der kunne ikke findes nogen Wi-Fi-QR-kode i det billede.
+Connect to a WiFi network	wpa_supplicant		Forbind til et trådløst netværk
+Password format invalid!	wpa_supplicant		Ugyldigt kodeordsformat!
+Hide password	wpa_supplicant		Skjul kodeord
+Network name:	wpa_supplicant		Netværksnavn:
+Scan Wi-Fi QR code	wpa_supplicant		Scan Wi-Fi-QR-kode
+Keep current	wpa_supplicant		Behold nuværende
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Scan Wi-Fi-QR-kode fra webkamera
+Scan Wi-Fi QR code from image file	wpa_supplicant		Scan Wi-Fi-QR-kode fra billedfil

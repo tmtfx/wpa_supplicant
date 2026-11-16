@@ -1,15 +1,26 @@
-1	Ukrainian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Автентифікація:
+1	Ukrainian	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Пароль:
+Store this configuration	wpa_supplicant		Зберегти цю конфігурацію
+No video capture device could be used: %s	wpa_supplicant		Не вдалося використати жоден пристрій захоплення відео: %s
+Different network	wpa_supplicant		Інша мережа
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Відсканований QR-код призначений для мережі '%s', а не '%s'. Бажаєте замінити назву мережі на назву з QR-коду?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Наведіть камеру на QR-код спільного доступу до Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP – незахищене шифрування
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Скасувати
-Connect to a WiFi network	wpa_supplicant		Підключитися до мережі WiFi
+Show password	wpa_supplicant		Показати гасло
+Open ‒ no encryption	wpa_supplicant		Відкрито – без шифрування
+Authentication:	wpa_supplicant		Автентифікація:
+No QR code found	wpa_supplicant		QR-код не знайдено
+Replace	wpa_supplicant		Замінити
 Failed to join network. (Incorrect password?)	wpa_supplicant		Неможливо приєднатися до мережі. (Неправильний пароль?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		У цьому зображенні не знайдено QR-коду Wi-Fi.
+Connect to a WiFi network	wpa_supplicant		Підключитися до мережі WiFi
+Password format invalid!	wpa_supplicant		Недійсний формат пароля!
 Hide password	wpa_supplicant		Приховати гасло
 Network name:	wpa_supplicant		Назва мережі:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Відкрито – без шифрування
-Password format invalid!	wpa_supplicant		Недійсний формат пароля!
-Password:	wpa_supplicant		Пароль:
-Show password	wpa_supplicant		Показати гасло
-Store this configuration	wpa_supplicant		Зберегти цю конфігурацію
-WEP ‒ insecure encryption	wpa_supplicant		WEP – незахищене шифрування
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Сканувати QR-код Wi-Fi
+Keep current	wpa_supplicant		Залишити поточне
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Сканувати QR-код Wi-Fi з вебкамери
+Scan Wi-Fi QR code from image file	wpa_supplicant		Сканувати QR-код Wi-Fi з файлу зображення

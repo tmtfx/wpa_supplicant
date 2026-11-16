@@ -2066,6 +2066,11 @@ catkeys: $(CATKEYS_DIR)/en.catkeys
 
 $(CATKEYS_DIR)/en.catkeys : $(CATKEYS_DIR) wpa_gui-haiku/wpa_supplicant.pre
 	collectcatkeys -s $(APP_MIME_SIG) wpa_gui-haiku/wpa_supplicant.pre -o $(CATKEYS_DIR)/en.catkeys
+
+PYTHON ?= /bin/python3
+
+update-catkeys: catkeys
+	$(PYTHON) wpa_gui-haiku/update_catkeys.py $(CATKEYS_DIR)
 endif
 
 _OBJS_VAR := OBJS_t

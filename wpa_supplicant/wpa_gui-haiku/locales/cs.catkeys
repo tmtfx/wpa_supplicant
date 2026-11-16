@@ -1,15 +1,26 @@
-1	Czech	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Ověření:
+1	Czech	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Heslo:
+Store this configuration	wpa_supplicant		Uložit nastavení
+No video capture device could be used: %s	wpa_supplicant		Nelze použít žádné zařízení pro záznam videa: %s
+Different network	wpa_supplicant		Jiná síť
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Naskenovaný QR kód je pro síť '%s', nikoli '%s'. Chcete nahradit název sítě názvem z QR kódu?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Namiřte kameru na QR kód pro sdílení Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ nezabezpečené šifrování
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Zrušit
-Connect to a WiFi network	wpa_supplicant		Připojit k bezdrátové síti
+Show password	wpa_supplicant		Zobrazit heslo
+Open ‒ no encryption	wpa_supplicant		Otevřít ‒ žádné šifrování
+Authentication:	wpa_supplicant		Ověření:
+No QR code found	wpa_supplicant		QR kód nebyl nalezen
+Replace	wpa_supplicant		Nahradit
 Failed to join network. (Incorrect password?)	wpa_supplicant		Připojení k síti se nezdařilo. (Špatné heslo?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		V tomto obrázku nebyl nalezen žádný QR kód Wi-Fi.
+Connect to a WiFi network	wpa_supplicant		Připojit k bezdrátové síti
+Password format invalid!	wpa_supplicant		Chybný formát hesla!
 Hide password	wpa_supplicant		Skrýt heslo
 Network name:	wpa_supplicant		Název sítě:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Otevřít ‒ žádné šifrování
-Password format invalid!	wpa_supplicant		Chybný formát hesla!
-Password:	wpa_supplicant		Heslo:
-Show password	wpa_supplicant		Zobrazit heslo
-Store this configuration	wpa_supplicant		Uložit nastavení
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ nezabezpečené šifrování
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Skenovat QR kód Wi-Fi
+Keep current	wpa_supplicant		Ponechat stávající
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Skenovat QR kód Wi-Fi z webkamery
+Scan Wi-Fi QR code from image file	wpa_supplicant		Skenovat QR kód Wi-Fi ze souboru obrázku

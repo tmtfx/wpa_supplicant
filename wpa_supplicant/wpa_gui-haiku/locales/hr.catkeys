@@ -1,15 +1,26 @@
-1	Croatian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Ovjera:
-Cancel	wpa_supplicant		Otkaži
-Connect to a WiFi network	wpa_supplicant		Spoji na WiFi mrežu
-Failed to join network. (Incorrect password?)	wpa_supplicant		Failed to join network. (Incorrect password?)
-Hide password	wpa_supplicant		Hide password
-Network name:	wpa_supplicant		Ime mreže:
-OK	wpa_supplicant		U redu
-Open ‒ no encryption	wpa_supplicant		Open ‒ no encryption
-Password format invalid!	wpa_supplicant		Password format invalid!
+1	Croatian	application/x-vnd.malinen-wpa_supplicant	3816098977
 Password:	wpa_supplicant		Lozinka:
-Show password	wpa_supplicant		Show password
 Store this configuration	wpa_supplicant		Spremi ovu konfiguraciju
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
+No video capture device could be used: %s	wpa_supplicant		Nijedan uređaj za snimanje videozapisa nije se mogao upotrijebiti: %s
+Different network	wpa_supplicant		Druga mreža
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Skenirani QR kod je za mrežu '%s', a ne '%s'. Želite li zamijeniti naziv mreže onim iz QR koda?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Usmjerite kameru prema QR kodu za dijeljenje Wi-Fi mreže…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ nesigurno šifriranje
+OK	wpa_supplicant		U redu
+Cancel	wpa_supplicant		Otkaži
+Show password	wpa_supplicant		Prikaži lozinku
+Open ‒ no encryption	wpa_supplicant		Otvoreno ‒ bez šifriranja
+Authentication:	wpa_supplicant		Ovjera:
+No QR code found	wpa_supplicant		Nije pronađen QR kod
+Replace	wpa_supplicant		Zamijeni
+Failed to join network. (Incorrect password?)	wpa_supplicant		Neuspjelo povezivanje s mrežom. (Pogrešna lozinka?)
 WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		U toj slici nije pronađen Wi-Fi QR kod.
+Connect to a WiFi network	wpa_supplicant		Spoji na WiFi mrežu
+Password format invalid!	wpa_supplicant		Neispravan format lozinke!
+Hide password	wpa_supplicant		Sakrij lozinku
+Network name:	wpa_supplicant		Ime mreže:
+Scan Wi-Fi QR code	wpa_supplicant		Skeniraj Wi-Fi QR kod
+Keep current	wpa_supplicant		Zadrži trenutno
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Skeniraj Wi-Fi QR kod s web-kamere
+Scan Wi-Fi QR code from image file	wpa_supplicant		Skeniraj Wi-Fi QR kod iz slikovne datoteke

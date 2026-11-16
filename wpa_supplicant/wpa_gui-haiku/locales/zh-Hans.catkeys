@@ -1,15 +1,26 @@
-1	Chinese (simplified)	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		认证模式:
+1	Chinese (simplified)	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		密码：
+Store this configuration	wpa_supplicant		保存此配置
+No video capture device could be used: %s	wpa_supplicant		无法使用视频采集设备：%s
+Different network	wpa_supplicant		不同网络
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		扫描的二维码属于网络 '%s'，而非 '%s'。是否将网络名称替换为二维码中的名称？
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		将摄像头对准 Wi-Fi 分享二维码…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ 不安全加密
+OK	wpa_supplicant		确定
 Cancel	wpa_supplicant		取消
-Connect to a WiFi network	wpa_supplicant		连接到 WiFi 网络
+Show password	wpa_supplicant		显示密码
+Open ‒ no encryption	wpa_supplicant		开放 ‒ 不加密
+Authentication:	wpa_supplicant		认证模式:
+No QR code found	wpa_supplicant		未找到二维码
+Replace	wpa_supplicant		替换
 Failed to join network. (Incorrect password?)	wpa_supplicant		加入网络失败。（密码错误？）
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		在该图像中未找到 Wi-Fi 二维码。
+Connect to a WiFi network	wpa_supplicant		连接到 WiFi 网络
+Password format invalid!	wpa_supplicant		密码格式不正确！
 Hide password	wpa_supplicant		隐藏密码
 Network name:	wpa_supplicant		网络名称：
-OK	wpa_supplicant		确定
-Open ‒ no encryption	wpa_supplicant		开放 ‒ 不加密
-Password format invalid!	wpa_supplicant		密码格式不正确！
-Password:	wpa_supplicant		密码：
-Show password	wpa_supplicant		显示密码
-Store this configuration	wpa_supplicant		保存此配置
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ 不安全加密
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		扫描 Wi-Fi 二维码
+Keep current	wpa_supplicant		保留当前
+Scan Wi-Fi QR code from webcam	wpa_supplicant		从摄像头扫描 Wi-Fi 二维码
+Scan Wi-Fi QR code from image file	wpa_supplicant		从图像文件扫描 Wi-Fi 二维码

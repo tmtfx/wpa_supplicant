@@ -1,15 +1,26 @@
-1	Catalan	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Autenticació:
+1	Catalan	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Contrasenya:
+Store this configuration	wpa_supplicant		Desa aquesta configuració
+No video capture device could be used: %s	wpa_supplicant		No s'ha pogut utilitzar cap dispositiu de captura de vídeo: %s
+Different network	wpa_supplicant		Xarxa diferent
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		El codi QR escanejat és per a la xarxa '%s', no pas per a '%s'. Voleu substituir el nom de la xarxa pel del codi QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Apunteu la càmera cap a un codi QR per compartir Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP, encriptació no segura
+OK	wpa_supplicant		D'acord
 Cancel	wpa_supplicant		Cancel·la
-Connect to a WiFi network	wpa_supplicant		Connecta a una xarxa WiFi
+Show password	wpa_supplicant		Mostra la contrasenya
+Open ‒ no encryption	wpa_supplicant		Obre, sense encriptació
+Authentication:	wpa_supplicant		Autenticació:
+No QR code found	wpa_supplicant		No s'ha trobat cap codi QR
+Replace	wpa_supplicant		Reemplaça
 Failed to join network. (Incorrect password?)	wpa_supplicant		Ha fallat unir-se a la xarxa. (Contrasenya incorrecta?)
+WPA/WPA2	wpa_supplicant		WPA / WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		No s'ha pogut trobar cap codi QR de Wi-Fi en aquesta imatge.
+Connect to a WiFi network	wpa_supplicant		Connecta a una xarxa WiFi
+Password format invalid!	wpa_supplicant		Format de la contrasenya no vàlid!
 Hide password	wpa_supplicant		Amaga la contrasenya
 Network name:	wpa_supplicant		Nom de la xarxa:
-OK	wpa_supplicant		D'acord
-Open ‒ no encryption	wpa_supplicant		Obre, sense encriptació
-Password format invalid!	wpa_supplicant		Format de la contrasenya no vàlid!
-Password:	wpa_supplicant		Contrasenya:
-Show password	wpa_supplicant		Mostra la contrasenya
-Store this configuration	wpa_supplicant		Desa aquesta configuració
-WEP ‒ insecure encryption	wpa_supplicant		WEP, encriptació no segura
-WPA/WPA2	wpa_supplicant		WPA / WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Escaneja el codi QR de Wi-Fi
+Keep current	wpa_supplicant		Mantén l'actual
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Escaneja el codi QR de Wi-Fi des de la càmera web
+Scan Wi-Fi QR code from image file	wpa_supplicant		Escaneja el codi QR de Wi-Fi des d'un fitxer d'imatge

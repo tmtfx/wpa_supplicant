@@ -1,15 +1,26 @@
-1	Korean	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		인증:
+1	Korean	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		비밀번호:
+Store this configuration	wpa_supplicant		설정 저장하기
+No video capture device could be used: %s	wpa_supplicant		비디오 캡처 장치를 사용할 수 없습니다: %s
+Different network	wpa_supplicant		다른 네트워크
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		스캔된 QR 코드는 '%s' 네트워크용이며 '%s'이(가) 아닙니다. 네트워크 이름을 QR 코드의 이름으로 바꾸시겠습니까?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Wi-Fi 공유 QR 코드를 카메라로 비춰주세요…
+WEP ‒ insecure encryption	wpa_supplicant		WEP - 낮은 암호화
+OK	wpa_supplicant		확인
 Cancel	wpa_supplicant		취소
-Connect to a WiFi network	wpa_supplicant		WiFI 네트워크에 연결되었습니다
+Show password	wpa_supplicant		비밀번호 보이기
+Open ‒ no encryption	wpa_supplicant		암호화 없음
+Authentication:	wpa_supplicant		인증:
+No QR code found	wpa_supplicant		QR 코드를 찾을 수 없습니다
+Replace	wpa_supplicant		바꾸기
 Failed to join network. (Incorrect password?)	wpa_supplicant		네트워크에 접속할 수 없습니다 (잘못된 비밀번호)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		해당 이미지에서 Wi-Fi QR 코드를 찾을 수 없습니다.
+Connect to a WiFi network	wpa_supplicant		WiFI 네트워크에 연결되었습니다
+Password format invalid!	wpa_supplicant		비밀번호 형식이 잘못되었습니다!
 Hide password	wpa_supplicant		비밀번호 숨기기
 Network name:	wpa_supplicant		네트워크 이름:
-OK	wpa_supplicant		확인
-Open ‒ no encryption	wpa_supplicant		암호화 없음
-Password format invalid!	wpa_supplicant		비밀번호 형식이 잘못되었습니다!
-Password:	wpa_supplicant		비밀번호:
-Show password	wpa_supplicant		비밀번호 보이기
-Store this configuration	wpa_supplicant		설정 저장하기
-WEP ‒ insecure encryption	wpa_supplicant		WEP - 낮은 암호화
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Wi-Fi QR 코드 스캔
+Keep current	wpa_supplicant		현재 상태 유지
+Scan Wi-Fi QR code from webcam	wpa_supplicant		웹캠에서 Wi-Fi QR 코드 스캔
+Scan Wi-Fi QR code from image file	wpa_supplicant		이미지 파일에서 Wi-Fi QR 코드 스캔

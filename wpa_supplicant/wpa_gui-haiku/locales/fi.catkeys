@@ -1,15 +1,26 @@
-1	Finnish	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Authentication:
+1	Finnish	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Salasana:
+Store this configuration	wpa_supplicant		Tallenna nämä asetukset
+No video capture device could be used: %s	wpa_supplicant		Videokaappauslaitetta ei voitu käyttää: %s
+Different network	wpa_supplicant		Eri verkko
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Skannattu QR-koodi on verkolle '%s', ei '%s'. Haluatko korvata verkon nimen QR-koodin nimellä?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Osoita kamera Wi-Fi-jakamisen QR-koodiin…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ turvaton salaus
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Peru
-Connect to a WiFi network	wpa_supplicant		Yhdistä WIFI-verkkoon
+Show password	wpa_supplicant		Näytä salasana
+Open ‒ no encryption	wpa_supplicant		Avoin - ei salausta
+Authentication:	wpa_supplicant		Todennus:
+No QR code found	wpa_supplicant		QR-koodia ei löytynyt
+Replace	wpa_supplicant		Korvaa
 Failed to join network. (Incorrect password?)	wpa_supplicant		Yhdistäminen epäonnistui. (Tarkista salasana?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Kuvasta ei löytynyt Wi-Fi-QR-koodia.
+Connect to a WiFi network	wpa_supplicant		Yhdistä WIFI-verkkoon
+Password format invalid!	wpa_supplicant		Salasanan muoto on virheellinen!
 Hide password	wpa_supplicant		Piilota salasana
 Network name:	wpa_supplicant		Verkon nimi:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Avoin - ei salausta
-Password format invalid!	wpa_supplicant		Password format invalid!
-Password:	wpa_supplicant		Salasana:
-Show password	wpa_supplicant		Näytä salasana
-Store this configuration	wpa_supplicant		Store this configuration
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Skannaa Wi-Fi-QR-koodi
+Keep current	wpa_supplicant		Pidä nykyinen
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Skannaa Wi-Fi-QR-koodi web-kamerasta
+Scan Wi-Fi QR code from image file	wpa_supplicant		Skannaa Wi-Fi-QR-koodi kuvatiedostosta

@@ -1,15 +1,26 @@
-1	Spanish (Latin American)	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Autenticación:
+1	Spanish (Latin American)	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Contraseña:
+Store this configuration	wpa_supplicant		Guardar esta configuración
+No video capture device could be used: %s	wpa_supplicant		No se pudo utilizar ningún dispositivo de captura de video: %s
+Different network	wpa_supplicant		Red diferente
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		El código QR escaneado es para la red '%s', no '%s'. ¿Desea reemplazar el nombre de la red por el del código QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Apunte la cámara a un código QR para compartir Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ cifrado inseguro
+OK	wpa_supplicant		Aceptar
 Cancel	wpa_supplicant		Cancelar
-Connect to a WiFi network	wpa_supplicant		Conectar a red WiFi
+Show password	wpa_supplicant		Mostrar contraseña
+Open ‒ no encryption	wpa_supplicant		Abierto - sin cifrado
+Authentication:	wpa_supplicant		Autenticación:
+No QR code found	wpa_supplicant		No se encontró ningún código QR
+Replace	wpa_supplicant		Reemplazar
 Failed to join network. (Incorrect password?)	wpa_supplicant		Error al conectar a esta red. (¿Contraseña incorrecta?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		No se pudo encontrar ningún código QR de Wi-Fi en esa imagen.
+Connect to a WiFi network	wpa_supplicant		Conectar a red WiFi
+Password format invalid!	wpa_supplicant		¡Formato de contraseña no válido!
 Hide password	wpa_supplicant		Ocultar contraseña
 Network name:	wpa_supplicant		Nombre de red:
-OK	wpa_supplicant		Aceptar
-Open ‒ no encryption	wpa_supplicant		Abierto - sin cifrado
-Password format invalid!	wpa_supplicant		¡Formato de contraseña no válido!
-Password:	wpa_supplicant		Contraseña:
-Show password	wpa_supplicant		Mostrar contraseña
-Store this configuration	wpa_supplicant		Guardar esta configuración
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ cifrado inseguro
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Escanear código QR de Wi-Fi
+Keep current	wpa_supplicant		Mantener actual
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Escanear código QR de Wi-Fi desde la cámara web
+Scan Wi-Fi QR code from image file	wpa_supplicant		Escanear código QR de Wi-Fi desde un archivo de imagen

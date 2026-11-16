@@ -1,15 +1,26 @@
-1	Friulian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Autenticazion:
+1	Friulian	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Peraule di ordin:
+Store this configuration	wpa_supplicant		Memorize cheste configurazion
+No video capture device could be used: %s	wpa_supplicant		Nol è stât pussibil doprâ dispositîfs di acuisizion video: %s
+Different network	wpa_supplicant		Rêt divierse
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Il codiç QR scansionât al è pe rêt '%s', no par '%s'. Desidersitu sostituî il non de rêt cun chel dal codiç QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Ponte la videocjamare viers il codiç QR di condivision de rêt Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ cifradure no sigure
+OK	wpa_supplicant		Va ben
 Cancel	wpa_supplicant		Anule
+Show password	wpa_supplicant		Mostre password
+Open ‒ no encryption	wpa_supplicant		Vierte ‒ cence cifradure
+Authentication:	wpa_supplicant		Autenticazion:
+No QR code found	wpa_supplicant		Nissun codiç QR cjatât
+Replace	wpa_supplicant		Sostituìs
+Failed to join network. (Incorrect password?)	wpa_supplicant		Nol è stât pussibil jentrâ te rêt. (Peraule di ordin sbaliade?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Nol è stât pussibil cjatâ codiçs QR pal Wi-Fi in chê imagjin.
 Connect to a WiFi network	wpa_supplicant		Conet a une rêt WiFi
-Failed to join network. (Incorrect password?)	wpa_supplicant		No si è rivâts a unîsi ae rêt. (Peraule di ordin sbaliade?)
+Password format invalid!	wpa_supplicant		Formât de peraule di ordin no valit!
 Hide password	wpa_supplicant		Plate password
 Network name:	wpa_supplicant		Non de rêt:
-OK	wpa_supplicant		Va ben
-Open ‒ no encryption	wpa_supplicant		Vierte ‒ cence cifradure
-Password format invalid!	wpa_supplicant		Formât de peraule di ordin no valit!
-Password:	wpa_supplicant		Peraule di ordin:
-Show password	wpa_supplicant		Mostre password
-Store this configuration	wpa_supplicant		Memorize cheste configurazion
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ cifradure no sigure
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Scansione codiç QR pal Wi-Fi
+Keep current	wpa_supplicant		Ten cheste
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Scansione codiç QR pal Wi-Fi QR de webcam
+Scan Wi-Fi QR code from image file	wpa_supplicant		Scansione codiç QR pal Wi-Fi QR leint un file imagjin

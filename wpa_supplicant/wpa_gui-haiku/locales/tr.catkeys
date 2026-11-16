@@ -1,15 +1,26 @@
-1	Turkish	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Kimlik doğrulama:
+1	Turkish	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Parola:
+Store this configuration	wpa_supplicant		Bu yapılandırmayı sakla
+No video capture device could be used: %s	wpa_supplicant		Herhangi bir video yakalama aygıtı kullanılamadı: %s
+Different network	wpa_supplicant		Farklı ağ
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Taranan QR kod '%s' ağı içindir, '%s' değil. Ağ adını QR kodundaki ile değiştirmek istiyor musunuz?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Kamerayı bir Wi-Fi paylaşım QR koduna doğrultun…
+WEP ‒ insecure encryption	wpa_supplicant		WEP — güvenliksiz şifreleme
+OK	wpa_supplicant		Tamam
 Cancel	wpa_supplicant		İptal
-Connect to a WiFi network	wpa_supplicant		Bir Wi-Fi ağına bağlan
+Show password	wpa_supplicant		Parolayı göster
+Open ‒ no encryption	wpa_supplicant		Açık — şifreleme yok
+Authentication:	wpa_supplicant		Kimlik doğrulama:
+No QR code found	wpa_supplicant		QR kod bulunamadı
+Replace	wpa_supplicant		Değiştir
 Failed to join network. (Incorrect password?)	wpa_supplicant		Ağa bağlanılamadı. Parolanız yanlış olabilir.
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Bu görüntüde bir Wi-Fi QR kodu bulunamadı.
+Connect to a WiFi network	wpa_supplicant		Bir Wi-Fi ağına bağlan
+Password format invalid!	wpa_supplicant		Parola biçimi geçersiz!
 Hide password	wpa_supplicant		Parolayı gizle
 Network name:	wpa_supplicant		Ağ adı:
-OK	wpa_supplicant		Tamam
-Open ‒ no encryption	wpa_supplicant		Açık — şifreleme yok
-Password format invalid!	wpa_supplicant		Parola biçimi geçersiz!
-Password:	wpa_supplicant		Parola:
-Show password	wpa_supplicant		Parolayı göster
-Store this configuration	wpa_supplicant		Bu yapılandırmayı sakla
-WEP ‒ insecure encryption	wpa_supplicant		WEP — güvenliksiz şifreleme
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Wi-Fi QR kodunu tara
+Keep current	wpa_supplicant		Mevcut olanı koru
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Web kamerasından Wi-Fi QR kodunu tara
+Scan Wi-Fi QR code from image file	wpa_supplicant		Görüntü dosyasından Wi-Fi QR kodunu tara

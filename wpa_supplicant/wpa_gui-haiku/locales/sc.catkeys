@@ -1,15 +1,26 @@
-1	Sardinian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Averiguadura:
+1	Sardinian	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Crae de atzessu:
+Store this configuration	wpa_supplicant		Alloga custu cuncordu
+No video capture device could be used: %s	wpa_supplicant		Nissunu dispositivu de caturadura vìdeu podet èssere impreadu: %s
+Different network	wpa_supplicant		Retza diferente
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Su còdighe QR iscansionadu est pro sa retza '%s', non '%s'. Boles remplasare su nùmene de sa retza cun cussu de su còdighe QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Punta sa càmera cara a unu còdighe QR de cumpartzidura Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ tzifradura chena siguresa
+OK	wpa_supplicant		Deghet
 Cancel	wpa_supplicant		Annudda
-Connect to a WiFi network	wpa_supplicant		Acroba a una retza chena filos
+Show password	wpa_supplicant		Mustra sa crae de atzessu
+Open ‒ no encryption	wpa_supplicant		Aberta ‒ chena tzifradura
+Authentication:	wpa_supplicant		Averiguadura:
+No QR code found	wpa_supplicant		Nissunu còdighe QR agatadu
+Replace	wpa_supplicant		Remplasa
 Failed to join network. (Incorrect password?)	wpa_supplicant		No est possìbile acrobare a sa retza (una faddina in sa clae?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Nissunu còdighe QR Wi-Fi agatadu in custa immàgine.
+Connect to a WiFi network	wpa_supplicant		Acroba a una retza chena filos
+Password format invalid!	wpa_supplicant		Su formadu de sa crae non est bàlidu!
 Hide password	wpa_supplicant		Cua sa crae de atzessu
 Network name:	wpa_supplicant		Nùmene de sa retza:
-OK	wpa_supplicant		Deghet
-Open ‒ no encryption	wpa_supplicant		Aberta ‒ chena tzifradura
-Password format invalid!	wpa_supplicant		Su formadu de sa crae non est bàlidu!
-Password:	wpa_supplicant		Crae de atzessu:
-Show password	wpa_supplicant		Mustra sa crae de atzessu
-Store this configuration	wpa_supplicant		Alloga custu cuncordu
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ tzifradura chena siguresa
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Iscansiona còdighe QR Wi-Fi
+Keep current	wpa_supplicant		Mantene su currente
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Iscansiona còdighe QR Wi-Fi dae sa webcam
+Scan Wi-Fi QR code from image file	wpa_supplicant		Iscansiona còdighe QR Wi-Fi dae un'archìviu de immàgine

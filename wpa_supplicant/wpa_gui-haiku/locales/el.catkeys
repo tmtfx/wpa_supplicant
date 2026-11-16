@@ -1,15 +1,26 @@
-1	Greek (Modern)	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Ταυτοποίηση:
-Cancel	wpa_supplicant		Ακύρωση
-Connect to a WiFi network	wpa_supplicant		Συνδεθείτε σε δίκτυο WiFi
-Failed to join network. (Incorrect password?)	wpa_supplicant		Η σύνδεση στο δίκτυο απέτυχε. (Λάθος κωδικός;)
-Hide password	wpa_supplicant		Hide password
-Network name:	wpa_supplicant		Όνομα δικτύου:
-OK	wpa_supplicant		Εντάξει
-Open ‒ no encryption	wpa_supplicant		Open ‒ no encryption
-Password format invalid!	wpa_supplicant		Μη έγκυρη μορφή κωδικού πρόσβασης!
+1	Greek (Modern)	application/x-vnd.malinen-wpa_supplicant	3816098977
 Password:	wpa_supplicant		Κωδικός πρόσβασης:
-Show password	wpa_supplicant		Show password
 Store this configuration	wpa_supplicant		Αποθήκευση ρυθμίσεων
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
+No video capture device could be used: %s	wpa_supplicant		Δεν ήταν δυνατή η χρήση συσκευής λήψης βίντεο: %s
+Different network	wpa_supplicant		Διαφορετικό δίκτυο
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Ο κωδικός QR που σαρώθηκε είναι για το δίκτυο '%s', όχι για το '%s'. Θέλετε να αντικαταστήσετε το όνομα του δικτύου με αυτό από τον κωδικό QR;
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Στρέψτε την κάμερα σε έναν κωδικό QR κοινής χρήσης Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ μη ασφαλής κρυπτογράφηση
+OK	wpa_supplicant		Εντάξει
+Cancel	wpa_supplicant		Ακύρωση
+Show password	wpa_supplicant		Εμφάνιση κωδικού πρόσβασης
+Open ‒ no encryption	wpa_supplicant		Ανοιχτό ‒ χωρίς κρυπτογράφηση
+Authentication:	wpa_supplicant		Ταυτοποίηση:
+No QR code found	wpa_supplicant		Δεν βρέθηκε κωδικός QR
+Replace	wpa_supplicant		Αντικατάσταση
+Failed to join network. (Incorrect password?)	wpa_supplicant		Η σύνδεση στο δίκτυο απέτυχε. (Λάθος κωδικός;)
 WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Δεν βρέθηκε κωδικός QR Wi-Fi σε αυτήν την εικόνα.
+Connect to a WiFi network	wpa_supplicant		Συνδεθείτε σε δίκτυο WiFi
+Password format invalid!	wpa_supplicant		Μη έγκυρη μορφή κωδικού πρόσβασης!
+Hide password	wpa_supplicant		Απόκρυψη κωδικού πρόσβασης
+Network name:	wpa_supplicant		Όνομα δικτύου:
+Scan Wi-Fi QR code	wpa_supplicant		Σάρωση κωδικού QR Wi-Fi
+Keep current	wpa_supplicant		Διατήρηση τρέχοντος
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Σάρωση κωδικού QR Wi-Fi από webcam
+Scan Wi-Fi QR code from image file	wpa_supplicant		Σάρωση κωδικού QR Wi-Fi από αρχείο εικόνας

@@ -1,15 +1,26 @@
-1	German	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Verschlüsselung:
+1	German	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Kennwort:
+Store this configuration	wpa_supplicant		Konfiguration speichern
+No video capture device could be used: %s	wpa_supplicant		Es konnte kein Videoaufnahmegerät verwendet werden: %s
+Different network	wpa_supplicant		Anderes Netzwerk
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Der gescannte QR-Code ist für das Netzwerk '%s', nicht '%s'. Soll der Netzwerkname durch den aus dem QR-Code ersetzt werden?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Kamera auf einen WLAN-Freigabe-QR-Code richten…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ unsichere Verschlüsselung
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Abbrechen
-Connect to a WiFi network	wpa_supplicant		Mit Funknetzwerk verbinden
+Show password	wpa_supplicant		Kennwort zeigen
+Open ‒ no encryption	wpa_supplicant		Offen - keine Verschlüsselung
+Authentication:	wpa_supplicant		Verschlüsselung:
+No QR code found	wpa_supplicant		Kein QR-Code gefunden
+Replace	wpa_supplicant		Ersetzen
 Failed to join network. (Incorrect password?)	wpa_supplicant		Verbindung zum Netzwerk fehlgeschlagen (falsches Kennwort?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		In diesem Bild konnte kein WLAN-QR-Code gefunden werden.
+Connect to a WiFi network	wpa_supplicant		Mit Funknetzwerk verbinden
+Password format invalid!	wpa_supplicant		Kennwortformat ungültig!
 Hide password	wpa_supplicant		Kennwort verbergen
 Network name:	wpa_supplicant		Netzwerkname:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Offen - keine Verschlüsselung
-Password format invalid!	wpa_supplicant		Kennwortformat ungültig!
-Password:	wpa_supplicant		Kennwort:
-Show password	wpa_supplicant		Kennwort zeigen
-Store this configuration	wpa_supplicant		Konfiguration speichern
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ unsichere Verschlüsselung
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		WLAN-QR-Code scannen
+Keep current	wpa_supplicant		Aktuelles behalten
+Scan Wi-Fi QR code from webcam	wpa_supplicant		WLAN-QR-Code über Webcam scannen
+Scan Wi-Fi QR code from image file	wpa_supplicant		WLAN-QR-Code aus Bilddatei scannen

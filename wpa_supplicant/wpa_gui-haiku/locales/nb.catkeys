@@ -1,15 +1,26 @@
-1	Norwegian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Autentisering:
+1	Norwegian	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Passord:
+Store this configuration	wpa_supplicant		Lagre disse innstillingene
+No video capture device could be used: %s	wpa_supplicant		Ingen videoopptaksenhet kunne brukes: %s
+Different network	wpa_supplicant		Annet nettverk
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Den skannede QR-koden er for nettverket '%s', ikke '%s'. Vil du erstatte nettverksnavnet med det fra QR-koden?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Rett kameraet mot en QR-kode for Wi-Fi-deling…
+WEP ‒ insecure encryption	wpa_supplicant		WEP - usikker kryptering
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Avbryt
-Connect to a WiFi network	wpa_supplicant		Koble til et WiFi nettverk
+Show password	wpa_supplicant		Vis passord
+Open ‒ no encryption	wpa_supplicant		Åpent - ingen kryptering
+Authentication:	wpa_supplicant		Autentisering:
+No QR code found	wpa_supplicant		Ingen QR-kode funnet
+Replace	wpa_supplicant		Erstatt
 Failed to join network. (Incorrect password?)	wpa_supplicant		Kunne ikke koble til nettverket. (Feil passord?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Ingen Wi-Fi-QR-kode ble funnet i det bildet.
+Connect to a WiFi network	wpa_supplicant		Koble til et WiFi nettverk
+Password format invalid!	wpa_supplicant		Ugyldig passordformat!
 Hide password	wpa_supplicant		Skjul passord
 Network name:	wpa_supplicant		Nettverksnavn:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Åpent - ingen kryptering
-Password format invalid!	wpa_supplicant		Ugyldig passordformat!
-Password:	wpa_supplicant		Passord:
-Show password	wpa_supplicant		Vis passord
-Store this configuration	wpa_supplicant		Lagre disse innstillingene
-WEP ‒ insecure encryption	wpa_supplicant		WEP - usikker kryptering
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Skann Wi-Fi-QR-kode
+Keep current	wpa_supplicant		Behold gjeldende
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Skann Wi-Fi-QR-kode fra webkamera
+Scan Wi-Fi QR code from image file	wpa_supplicant		Skann Wi-Fi-QR-kode fra bildefil

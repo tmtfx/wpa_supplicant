@@ -1,15 +1,26 @@
-1	Polish	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Uwierzytelnianie:
-Cancel	wpa_supplicant		Anuluj
-Connect to a WiFi network	wpa_supplicant		Połącz z siecią WiFi
-Failed to join network. (Incorrect password?)	wpa_supplicant		Nie udało się połączyć z siecią. (Niepoprawne hasło?)
-Hide password	wpa_supplicant		Hide password
-Network name:	wpa_supplicant		Nazwa sieci:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Open ‒ no encryption
-Password format invalid!	wpa_supplicant		Nieprawidłowy format hasła!
+1	Polish	application/x-vnd.malinen-wpa_supplicant	3816098977
 Password:	wpa_supplicant		Hasło:
-Show password	wpa_supplicant		Show password
 Store this configuration	wpa_supplicant		Zachowaj tę konfigurację
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ insecure encryption
+No video capture device could be used: %s	wpa_supplicant		Nie można użyć żadnego urządzenia do przechwytywania wideo: %s
+Different network	wpa_supplicant		Inna sieć
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Zeskanowany kod QR dotyczy sieci '%s', a nie '%s'. Czy chcesz zastąpić nazwę sieci nazwą z kodu QR?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Skieruj kamerę na kod QR udostępniania Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ niebezpieczne szyfrowanie
+OK	wpa_supplicant		OK
+Cancel	wpa_supplicant		Anuluj
+Show password	wpa_supplicant		Pokaż hasło
+Open ‒ no encryption	wpa_supplicant		Otwarta ‒ brak szyfrowania
+Authentication:	wpa_supplicant		Uwierzytelnianie:
+No QR code found	wpa_supplicant		Nie znaleziono kodu QR
+Replace	wpa_supplicant		Zastąp
+Failed to join network. (Incorrect password?)	wpa_supplicant		Nie udało się połączyć z siecią. (Niepoprawne hasło?)
 WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		Na tym obrazie nie znaleziono kodu QR Wi-Fi.
+Connect to a WiFi network	wpa_supplicant		Połącz z siecią WiFi
+Password format invalid!	wpa_supplicant		Nieprawidłowy format hasła!
+Hide password	wpa_supplicant		Ukryj hasło
+Network name:	wpa_supplicant		Nazwa sieci:
+Scan Wi-Fi QR code	wpa_supplicant		Skanuj kod QR Wi-Fi
+Keep current	wpa_supplicant		Zachowaj bieżącą
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Skanuj kod QR Wi-Fi z kamery internetowej
+Scan Wi-Fi QR code from image file	wpa_supplicant		Skanuj kod QR Wi-Fi z pliku obrazu

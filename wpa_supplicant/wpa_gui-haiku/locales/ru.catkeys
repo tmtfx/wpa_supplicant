@@ -1,15 +1,26 @@
-1	Russian	application/x-vnd.malinen-wpa_supplicant	2596284191
-Authentication:	wpa_supplicant		Аутентификация:
+1	Russian	application/x-vnd.malinen-wpa_supplicant	3816098977
+Password:	wpa_supplicant		Пароль:
+Store this configuration	wpa_supplicant		Сохранить эту конфигурацию
+No video capture device could be used: %s	wpa_supplicant		Не удалось использовать устройство захвата видео: %s
+Different network	wpa_supplicant		Другая сеть
+The scanned QR code is for network '%s', not '%s'. Do you want to replace the network name with the one from the QR code?	wpa_supplicant		Отсканированный QR-код предназначен для сети '%s', а не '%s'. Заменить имя сети на имя из QR-кода?
+Point the camera at a Wi-Fi sharing QR code…	wpa_supplicant		Наведите камеру на QR-код для подключения к Wi-Fi…
+WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ небезопасное шифрование
+OK	wpa_supplicant		OK
 Cancel	wpa_supplicant		Отмена
-Connect to a WiFi network	wpa_supplicant		Подключиться к WiFi-сети
+Show password	wpa_supplicant		Показать пароль
+Open ‒ no encryption	wpa_supplicant		Открытая ‒ без шифрования
+Authentication:	wpa_supplicant		Аутентификация:
+No QR code found	wpa_supplicant		QR-код не найден
+Replace	wpa_supplicant		Заменить
 Failed to join network. (Incorrect password?)	wpa_supplicant		Не удалось подключиться к сети. (Неверный пароль?)
+WPA/WPA2	wpa_supplicant		WPA/WPA2
+No Wi-Fi QR code could be found in that image.	wpa_supplicant		В этом изображении не найден QR-код Wi-Fi.
+Connect to a WiFi network	wpa_supplicant		Подключиться к WiFi-сети
+Password format invalid!	wpa_supplicant		Неверный формат пароля!
 Hide password	wpa_supplicant		Скрыть пароль
 Network name:	wpa_supplicant		Имя сети:
-OK	wpa_supplicant		OK
-Open ‒ no encryption	wpa_supplicant		Открытая ‒ без шифрования
-Password format invalid!	wpa_supplicant		Неверный формат пароля!
-Password:	wpa_supplicant		Пароль:
-Show password	wpa_supplicant		Показать пароль
-Store this configuration	wpa_supplicant		Сохранить эту конфигурацию
-WEP ‒ insecure encryption	wpa_supplicant		WEP ‒ небезопасное шифрование
-WPA/WPA2	wpa_supplicant		WPA/WPA2
+Scan Wi-Fi QR code	wpa_supplicant		Сканировать QR-код Wi-Fi
+Keep current	wpa_supplicant		Оставить текущее
+Scan Wi-Fi QR code from webcam	wpa_supplicant		Сканировать QR-код Wi-Fi с веб-камеры
+Scan Wi-Fi QR code from image file	wpa_supplicant		Сканировать QR-код Wi-Fi из файла изображения
